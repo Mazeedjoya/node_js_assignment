@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON to HTML Table</title>
+</head>
+
+<body>
+  <table id="data-table" style="border: 3px solid black;">
+    <thead>
+      <tr >
+        <th>Batch</th>
+        <th>Duration</th>
+        <th>Fees</th>
+      </tr>
+    </thead>
+    <tbody> <h1> Teacher's Table</h1></tbody>
+  </table>
+
+  <script>
+    // JSON data
+    var jsonData = [
+    {
+      "batch": "Nodejs",
+      "duration": "6 months",
+      "fees": "5000"
+    },
+    {
+        "batch": "JavaScript",
+      "duration": "6 months",
+      "fees": "12000"
+    },
+    {"batch": "HTML",
+      "duration": "3 months",
+      "fees": "4000"
+    },
+    {
+        "batch": "Designing",
+      "duration": "6 months",
+      "fees": "10000"
+    },
+    {
+        "batch": "Java",
+      "duration": " 5 months",
+      "fees": "8000"
+    }
+    ];
+
+    // Get the table body element
+    var tableBody = document.querySelector('#data-table tbody');
+
+    // Loop through the JSON data and create table rows and cells
+    for (var i = 0; i < jsonData.length; i++) {
+      var row = tableBody.insertRow(i);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+
+      // Set the cell values using JSON data
+      cell1.textContent = jsonData[i].batch;
+      cell2.textContent = jsonData[i].duration;
+      cell3.textContent = jsonData[i].fees;
+    }
+  </script>
+</body>
+</html>

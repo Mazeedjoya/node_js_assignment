@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JSON to HTML Table</title>
+</head>
+
+<body>
+  <table id="data-table" style="border: 3px solid black;">
+    <thead>
+      <tr >
+        <th>Name</th>
+        <th>Age</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody><h1> Student's Table</h1></tbody>
+  </table>
+
+  <script>
+    // JSON data
+    var jsonData = [
+    {
+      "name": "Sameer",
+      "age": "20",
+      "phone" : "89797968655"
+    },
+    {
+      "name": "Saad",
+      "age": "29",
+      "phone" : "89797968600"
+    },
+    {
+      "name": "Alan",
+      "age": "24",
+      "phone" : "89797968633"
+    },
+    {
+      "name": "Alzo",
+      "age": "21",
+      "phone" : "89797968611"
+    }
+    ];
+
+    // Get the table body element
+    var tableBody = document.querySelector('#data-table tbody');
+
+    // Loop through the JSON data and create table rows and cells
+    for (var i = 0; i < jsonData.length; i++) {
+      var row = tableBody.insertRow(i);
+      var cell1 = row.insertCell(0);
+      var cell2 = row.insertCell(1);
+      var cell3 = row.insertCell(2);
+
+      // Set the cell values using JSON data
+      cell1.textContent = jsonData[i].name;
+      cell2.textContent = jsonData[i].age;
+      cell3.textContent = jsonData[i].phone;
+    }
+  </script>
+</body>
+</html>

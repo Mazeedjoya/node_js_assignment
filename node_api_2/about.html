@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Welcome to WeCode Academy</title>
+  <style>
+    /* CSS styles for the welcome page */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    p {
+      line-height: 1.5;
+    }
+  </style>
+  <script>
+    // JavaScript code for dynamic content
+    window.addEventListener('DOMContentLoaded', (event) => {
+      // Get the container element
+      const container = document.querySelector('.container');
+
+      // Create dynamic content
+      const courses = ['Web Development', 'Mobile App Development', 'Data Science', 'Artificial Intelligence'];
+
+      const coursesList = document.createElement('ul');
+      courses.forEach((course) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = course;
+        coursesList.appendChild(listItem);
+      });
+
+      const dynamicContent = `
+        <h2>About Us</h2>
+        <p>WeCode Academy is a leading online platform that provides high-quality coding courses and resources. Whether you're a beginner or an experienced developer, we have something for everyone.</p>
+
+        <h2>Our Courses</h2>
+        <p>Explore our wide range of courses covering various programming languages and technologies:</p>
+        ${coursesList.outerHTML}
+      `;
+
+      // Add dynamic content to the container
+      container.innerHTML = dynamicContent;
+    });
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h1>Welcome to WeCode Academy</h1>
+  </div>
+
+  <div class="container">
+    <!-- Dynamic content will be inserted here -->
+  </div>
+</body>
+</html>

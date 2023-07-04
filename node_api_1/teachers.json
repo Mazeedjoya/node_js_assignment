@@ -1,0 +1,23 @@
+  {"teachers" : [
+    {
+      "name": "Sameer",
+      "age": "20",
+      "batch": "Nodejs"
+    },
+    {
+      "name": "Saad",
+      "age": "20",
+      "batch": "Nodejs"
+    },
+    {
+      "name": "Alan",
+      "age": "20",
+      "batch": "Nodejs"
+    },
+    {
+      "name": "Alzo",
+      "age": "20",
+      "batch": "Nodejs"
+    }
+  ]
+}
